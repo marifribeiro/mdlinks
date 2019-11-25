@@ -1,0 +1,25 @@
+{
+  "name": "sap003-md-links",
+  "version": "1.0.0",
+  "description": "Library to read markdown files and return the links containing in that file.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maryplank/SAP003-md-links.git"
+  },
+  "keywords": [
+    "md",
+    "markdown",
+    "links",
+    "library"
+  ],
+  "author": "Mariana Ribeiro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maryplank/SAP003-md-links/issues"
+  },
+  "homepage": "https://github.com/maryplank/SAP003-md-links#readme"
+}
