@@ -27,5 +27,8 @@
   "homepage": "https://github.com/maryplank/SAP003-md-links#readme",
   "devDependencies": {
     "jest": "^24.9.0"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.0"
   }
 }

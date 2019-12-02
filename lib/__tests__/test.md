@@ -6,3 +6,5 @@ Para esse projeto recomendamos o uso de [expressões regulares](https://develope
 Com o comando `npm install <githubname>/<reponame>` podemos instalar diretamente
 pelo GitHub. Ver [docs npm install 
 aqui](https://docs.npmjs.com/cli/install)
+[link quebrado](http://localhost:3000/)
+e uns textos lalalal
