@@ -4,7 +4,7 @@
   "description": "Library to read markdown files and return the links containing in that file.",
   "main": "lib/index.js",
   "scripts": {
-    "test": "jest --coverage"
+    "test": "jest --coverage --detectOpenHandles"
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,7 @@
   "author": "Mariana Ribeiro",
   "license": "ISC",
   "bin": {
-    "mdlinks": "./lib/cli.js"
+    "mdlinks": "./cli.js"
   },
   "bugs": {
     "url": "https://github.com/maryplank/SAP003-md-links/issues"
