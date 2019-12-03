@@ -4,6 +4,8 @@
   "description": "Library to read markdown files and return the links containing in that file.",
   "main": "lib/index.js",
   "scripts": {
+    "eslint": "eslint --ext .js lib/ --fix",
+    "pretest": "npm run eslint",
     "test": "jest --coverage --detectOpenHandles"
   },
   "repository": {
@@ -25,10 +27,9 @@
     "url": "https://github.com/maryplank/SAP003-md-links/issues"
   },
   "homepage": "https://github.com/maryplank/SAP003-md-links#readme",
-  "devDependencies": {
-    "jest": "^24.9.0"
-  },
   "dependencies": {
+    "jest": "^24.9.0",
+    "eslint": "^6.7.2",
     "node-fetch": "^2.6.0"
   }
 }
