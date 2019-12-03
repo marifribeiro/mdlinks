@@ -26,7 +26,8 @@ Use the following command to read a markdown file:
 
 With this command you will receive the title and address of the websites containing in the file you chose. Such as this:
 
-```Title: dp npm install
+```
+    Title: dp npm install
     URL: https://docs.npmjs.com/cli/install
 
     Title: expressões regulares
@@ -45,7 +46,8 @@ If you would like to receive the website response status, add --validate at the 
 
 And the response will be like this:
 
-```Title: Librerías
+```
+    Title: Librerías
     URL: http://community.laboratoria.la
     Status: 200
 
