@@ -68,11 +68,11 @@ After inslling both, run the following command to install this project's depende
 
 `npm install`
 
-Use the same commands in the section [Usage](https://github.com/maryplank/mdlinks#Usage) to read a markdown file, with or without the status of the websites found in the markdown file.
+Use the same commands in the section [Usage](https://github.com/maryplank/mdlinks#Usage) to read a markdown file (with or without feedback on the status of the websites).
 
-If you would like to run the tests on this project, you will first need to run a local server that sends status 500 (for testing reasons!). You can see how to do that in [this repository](https://github.com/maryplank/broken-site)
+If you would like to run the tests on this project, you will first need to run a local server that sends status 500 (for testing reasons!). You can see how to do that in [this repository](https://github.com/maryplank/broken-site) (it's very easy!)
 
-With the server up and running, do the following commands:
+With the server up and running, do the following command:
 
 `npm test`
 
