@@ -19,7 +19,7 @@ You can see all the requirements of the project in [Laboratoria's Github page](h
 
 ## About this project
 
-This project was made using only Node.js (Vanilla Javascript), and it's usege is through a command line interface. 
+This project was made using only Node.js (Vanilla Javascript), and it's usege is through a command line interface, or you can require the function mdLinks in your JavaScript application.
 It uses regex to find a pattern of markdown links, such as:
 `[This is a link!](https://link.com)`
 The regular expression used will search for the squared brackets followed by and an https:// or http:// pattern inside parenthesis, thus bringing the containing text in this pattern to the user.
@@ -27,6 +27,7 @@ Jest for testing, Node File System to read markdown files and Node Fetch to chec
 
 ## Usage
 
+### Command line
 You will need [npm](https://www.npmjs.com/) installed to use this library.
 
 After installing npm, run the following commands:
@@ -40,7 +41,7 @@ Use the following command to read a markdown file:
 `mdlinks <absolute path to markdown file>`
 
 Note: It is easier to right-click the file and copy it's path.
-With this command you will receive the titles and address of the websites containing in the file you chose. Such as this:
+With this command you will receive the titles and addresses of the websites containing in the file you chose. Such as this:
 
 ```
     Title: dp npm install
@@ -56,8 +57,7 @@ With this command you will receive the titles and address of the websites contai
     URL: https://docs.npmjs.com/cli/install
 ```
 
-This
-If you would like to receive the website response status, add --validate at the end of the command, a la the below:
+If you would like to receive the website response status, add `--validate` at the end of the command, a la the below:
 
 `mdlinks <absolute path to markdown file> --validate`
 
@@ -77,15 +77,54 @@ And the response will be like this:
     Status: 500
 ```
 
+### Importing to your JS application
+
+Follow the steps [above](#Usage) to install the repository globally and add the following code to your application:
+
+`const mdLinks = require("./lib/index.js");`
+
+The function accepts two parameters - **path** being the absolute path of the markdown file you want to read and **option** which is (guess what?) optional! And if it's value is true, the function will also return the response status of the website.
+See the example below to call mdLinks:
+
+```
+mdLinks(/home/user/README.md, '--validate')
+  .then((snap) => {
+    if (validate === '--validate') {
+      snap.forEach((link) => { 
+        console.log(link)
+      })
+    } else {
+      snap.forEach((link) => { 
+        console.log(link)
+      })
+    }
+  })
+  .catch(`Error: ${console.error}`);
+  ```
+
+This will return the following if validate returns false:
+
+```
+[{href: "https://docs.npmjs.com/cli/install", text: "dp \`npm install\`"},
+  {href: "https://developer.mozilla.org/pt-BR/docs/", text: "expressões regulares"}]
+```
+
+And the following if it returns true:
+
+```
+[{href: "https://docs.npmjs.com/cli/install", text: "dp \`npm install\`", status: 200},
+  {href: "https://developer.mozilla.org/pt-BR/docs/", text: "expressões regulares", status: 200}]
+```
+
 ## Run
 
-You will need [Node](https://nodejs.org/en/) and [npm](https://www.npmjs.com/) installed to run this project.
+You will need [npm](https://www.npmjs.com/) installed to run this project.
 
-After inslling both, run the following command to install this project's dependecies:
+After installing npm, run the following command to install this project's dependecies:
 
 `npm install`
 
-Use the same commands in the section [Usage](https://github.com/maryplank/mdlinks#Usage) to read a markdown file (with or without feedback on the status of the websites).
+Use the same commands in the section [Usage](#Usage) above to read a markdown file (with or without feedback on the status of the websites).
 
 If you would like to run the tests on this project, you will first need to run a local server that sends status 500 (for testing reasons!). You can see how to do that in [this repository](https://github.com/maryplank/broken-site) (it's very easy!)
 
