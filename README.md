@@ -19,18 +19,20 @@ You can see all the requirements of the project in [Laboratoria's Github page](h
 
 ## About this project
 
-This project was made using only Node.js (Vanilla Javascript), and it's usage is through a command line interface, or you can require the function mdLinks in your JavaScript application.
+This project was made using only Node.js (Vanilla Javascript), and its usage is through a command line interface, or you can require the function mdLinks in your JavaScript application.
 It uses regex to find a pattern of markdown links, such as:
 `[This is a link to Google!](https://www.google.com)`
-The regular expression used will search for the squared brackets followed by and an https:// or http:// pattern inside parenthesis, thus bringing the containing text in this pattern to the user.
-Jest for testing, Node File System to read markdown files and Node Fetch to check the website response.
+
+The regular expression will search for the squared brackets followed by and an https:// or http:// pattern inside parenthesis, thus bringing the containing text in this pattern to the user.
+It also uses Jest for testing, Node File System to read markdown files and Node Fetch to check the website response.
 
 ## Usage
 
 ### Command line
 You will need [npm](https://www.npmjs.com/) installed to use this library.
+This project cannot be installed through npm, since it was also made by other 50 students at Laboratoria's bootcamp, if all of us would upload our projects there, that would pollute npm. You'll need to clone this repository and follow the commands bellow.
 
-After installing npm, run the following commands:
+After installing npm and cloning this repository, run the following commands:
 
 Install this repository globally:
 
@@ -41,7 +43,7 @@ Use the following command to read a markdown file:
 `mdlinks <absolute path to markdown file>`
 
 Note: It is easier to right-click the file and copy it's path.
-With this command you will receive the titles and addresses of the websites containing in the file you chose. Such as this:
+With this command you will receive the titles and URL addresses of the websites containing in the file you chose. Such as this:
 
 ```
     Title: dp npm install
@@ -79,11 +81,11 @@ And the response will be like this:
 
 ### Importing to your JS application
 
-Follow the steps [above](#Usage) to install the repository globally and add the following code to your application:
+Follow the steps [above](#Usage) to clone and install the repository globally and add the following code to your application:
 
 `const mdLinks = require("./lib/index.js");`
 
-The function accepts two parameters - **path** being the absolute path of the markdown file you want to read and **option** which is (guess what?) optional! And if it's value is true, the function will also return the response status of the website.
+The function accepts two parameters - **path** being the absolute path of the markdown file you want to read and **option** which is (guess what?) optional! And if it's value is **'--validate'**, the function will also return the response status of the website.
 See the example below to call mdLinks:
 
 ```
@@ -109,7 +111,7 @@ This will return the following if validate returns false:
   {href: "https://developer.mozilla.org/pt-BR/docs/", text: "expressões regulares"}]
 ```
 
-And the following if it returns true:
+And the following if you require the status code:
 
 ```
 [{href: "https://docs.npmjs.com/cli/install", text: "dp \`npm install\`", status: 200},
