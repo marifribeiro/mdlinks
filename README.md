@@ -19,7 +19,7 @@ You can see all the requirements of the project in [Laboratoria's Github page](h
 
 ## About this project
 
-This project was made using only Node.js (Vanilla Javascript), and it's usege is through a command line interface, or you can require the function mdLinks in your JavaScript application.
+This project was made using only Node.js (Vanilla Javascript), and it's usage is through a command line interface, or you can require the function mdLinks in your JavaScript application.
 It uses regex to find a pattern of markdown links, such as:
 `[This is a link to Google!](https://www.google.com)`
 The regular expression used will search for the squared brackets followed by and an https:// or http:// pattern inside parenthesis, thus bringing the containing text in this pattern to the user.
