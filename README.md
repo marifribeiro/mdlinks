@@ -32,17 +32,21 @@ It also uses Jest for testing, Node File System to read markdown files and Node 
 You will need [npm](https://www.npmjs.com/) installed to use this library.
 This project cannot be installed through npm, since it was also made by other 50 students at Laboratoria's bootcamp, if all of us would upload our projects there, that would pollute npm. You'll need to clone this repository and follow the commands bellow.
 
-After installing npm and cloning this repository, run the following commands:
+After installing npm and cloning this repository, access the repository's folder and run the following commands:
 
 Install this repository globally:
 
-`npm install -g maryplank/mdlinks`
+`npm install -g`
 
 Use the following command to read a markdown file:
 
 `mdlinks <absolute path to markdown file>`
 
-Note: It is easier to right-click the file and copy it's path.
+For example:
+
+`mdlinks /home/dev/README.md`
+
+Note: It is easier to right-click the file and copy it's absolute path.
 With this command you will receive the titles and URL addresses of the websites containing in the file you chose. Such as this:
 
 ```
