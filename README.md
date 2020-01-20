@@ -36,7 +36,7 @@ After installing npm and cloning this repository, access the repository's folder
 
 Install this repository globally:
 
-`npm install -g`
+`sudo npm install -g`
 
 Use the following command to read a markdown file:
 
