@@ -30,6 +30,6 @@
   "dependencies": {
     "jest": "^24.9.0",
     "eslint": "^6.7.2",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.1"
   }
 }
